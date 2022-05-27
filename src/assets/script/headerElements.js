@@ -1,13 +1,32 @@
-export default {
-    "headerELements":{
-        "headerImg": "../assets/img/avada-marketing-logo.png",
-        "headerMenu": [
-            "Home",
-            "Services",
-            "Why Us",
-            "Case Studies",
-            "About",
-            "Blog"
-        ]
+export default[
+    {
+        name: "Home",
+        chevron: true,
+        isActive: true
+    },
+    {
+        name: "Services",
+        chevron: true,
+        isActive: false
+    },
+    {
+        name: "Why Us",
+        chevron: false,
+        isActive: false
+    },
+    {
+        name: "Case Studies",
+        chevron: false,
+        isActive: false
+    },
+    {
+        name: "About",
+        chevron: false,
+        isActive: false
+    },
+    {
+        name: "Blog",
+        chevron: false,
+        isActive: false
     }
-}
+]

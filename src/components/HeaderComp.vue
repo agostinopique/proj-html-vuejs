@@ -7,20 +7,19 @@
             <div class="header-nav">
                 <nav>
                     <ul>
-                        <li>MENU</li>
-                        <li>MENU</li>
-                        <li>MENU</li>
-                        <li>MENU</li>
-                        <li>MENU</li>
-                        <li>MENU</li>
+                        <li v-for="(comp, index) in headerElements"
+                            :key="index"
+                            :class="comp.isActive ? 'active' : ''">{{comp.name}}
+                            <i v-if="comp.chevron === true" class="bi bi-chevron-down"></i>
+                        </li>
                     </ul>
                 </nav>
             </div>
             <div class="contacts">
                 <div class="d-flex align-items-center">
-                    <i class="bi bi-telephone-fill"></i>
+                    <i class="bi bi-telephone-fill phone"></i>
                     <p>(555) 802-1234</p>
-                    <button class="btn header-btn">Free Quote</button>
+                    <button class="header-btn">Free Quote</button>
                 </div>
             </div>
         </div>
@@ -28,8 +27,17 @@
 </template>
 
 <script>
+import headerElements from '../assets/script/headerElements'
+
+
 export default {
-    naame: 'HeaderComp'
+    name: 'HeaderComp',
+    data(){
+        return {
+            headerElements: headerElements
+        }
+    }
+
 }
 </script>
 
@@ -38,10 +46,7 @@ export default {
     width: 100%;
     height: 90px;
     background-color: white;
-
-    border: 1px solid black;
-
-    .container{
+    .container{ 
         height: 100%;
     }
     .header-nav,
@@ -53,11 +58,16 @@ export default {
         .header-btn{
             background-color: #FFE7DA;
             color: #F85D00;
-            margin-left: 10px;
+            margin-left: 30px;
+            padding: 8px 25px;
+            border-radius: 7px;
+            border-color: #FFE7DA;
+            border-style: solid;
         }
 
-        i{
-        color: #F85D00;
+        .phone {
+            margin-right: 10px;
+            color: #F85D00;
         }
 
         p{
@@ -72,7 +82,12 @@ export default {
         margin-bottom: 0;
 
         li{
-            margin: 0 10px;
+            padding: 0 5px;
+            margin: 5px 20px;
+            &.active{
+                border-bottom: 2px solid #F85D00;
+                color: #F85D00;
+            }
         }
     }
 }

@@ -1,13 +1,15 @@
 <template>
-    <div class="container d-flex">
-        <div v-if="!cardElement.onRight" class="card-text-onLeft debug-class">
+    <div class="ap_card container">
+        <div v-if="cardIndex % 2" class="card-text-onLeft">
             <p>{{cardElement.type}}</p>
             <h2>{{cardElement.title}}</h2>
             <p>{{cardElement.text}}</p>
             <button class="card-btn">Get a Consultation</button>
         </div>
-        <div class="card-img debug-class">IMMAGINE</div>
-        <div v-if="cardElement.onRight" class="card-text debug-class">
+        <div class="card-img">
+            <img :src="cardElement.image" :alt="cardElement.type">
+        </div>
+        <div v-if="!(cardIndex % 2)" class="card-text">
             <p>{{cardElement.type}}</p>
             <h2>{{cardElement.title}}</h2>
             <p>{{cardElement.text}}</p>
@@ -20,27 +22,29 @@
 export default {
     name: 'CardComp',
     props:{
-        cardElement: Object
+        cardElement: Object,
+        cardIndex: Number
     }
 }
 </script>
-
 <style lang="scss" scoped>
-.debug-class{
-    border: 1px solid black;
+.ap_card{
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
 }
 .card-text,
 .card-img{
     width: 50%;
-    min-height: 400px;
+    // min-height: 400px;
 }
 .card-text-onLeft{
     width: 50%;
-    min-height: 400px;
-    padding: 50px 100px 0  230px ;
+    // min-height: 400px;
+    padding: 50px 250px 0 0;
 }
 .card-text {
-    padding: 50px 250px 0 50px;
+    padding: 50px 100px 0 150px;
 }
 .card-btn{
     margin-top: 15px;
@@ -49,6 +53,15 @@ export default {
     border-radius: 7px;
     background-color: #F85F11;
     color: white;
+}
+
+.card-img {
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 </style>

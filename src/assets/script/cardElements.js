@@ -17,7 +17,6 @@ export default [
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ad eius, perferendis totam optio commodi officiis recusandae?",
         
     },
-    
     {
         image: require(`../img/social-media-screen.png`),
         logo: "string",
@@ -25,6 +24,5 @@ export default [
         title: "Harness Your Social Proof",
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ad eius, perferendis totam optio commodi officiis recusandae veritatis ea ipsum dignissimos suscipit voluptatum?",
         
-    },
-    
+    }
 ]

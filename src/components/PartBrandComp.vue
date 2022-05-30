@@ -26,13 +26,14 @@ export default {
 
 .center-main{
     text-align: center;
+    margin-top: 150px;
     h2{
         font-weight: bold;
-        font-size: 35px;
+        font-size: 38px;
     }
     p{
-        color: rgb(177, 175, 175);
-        font-size: 16px;
+        font-weight: 100;
+        font-size: 18px;
     }
 
     .brand-logos{

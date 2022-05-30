@@ -1,5 +1,5 @@
 <template>
-    <div class="ap_card container">
+    <div class="ap_card">
         <div v-if="cardIndex % 2" class="card-text-onLeft">
             <p>{{cardElement.type}}</p>
             <h2>{{cardElement.title}}</h2>
@@ -29,6 +29,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .ap_card{
+    width: 70%;
+    margin: 0 auto;
     margin-bottom: 40px;
     display: flex;
     align-items: center;
@@ -36,15 +38,21 @@ export default {
 .card-text,
 .card-img{
     width: 50%;
-    // min-height: 400px;
 }
 .card-text-onLeft{
     width: 50%;
-    // min-height: 400px;
-    padding: 50px 250px 0 0;
+    padding: 50px;
+    h2{
+        font-size: 40px;
+        font-weight: bold;
+    }
 }
 .card-text {
-    padding: 50px 100px 0 150px;
+    padding: 50px 0 0 100px;
+    h2{
+        font-size: 40px;
+        font-weight: bold;
+    }
 }
 .card-btn{
     margin-top: 15px;

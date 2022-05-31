@@ -34,21 +34,22 @@ export default {
     margin-bottom: 40px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
-.card-text,
 .card-img{
     width: 50%;
 }
 .card-text-onLeft{
-    width: 50%;
-    padding: 50px;
+    width: 20%;
+    // padding: 50px 250px 0 0;
     h2{
         font-size: 40px;
         font-weight: bold;
     }
 }
 .card-text {
-    padding: 50px 0 0 100px;
+    // padding: 50px 0 0 250px;
+    width: 20%;
     h2{
         font-size: 40px;
         font-weight: bold;
@@ -66,9 +67,7 @@ export default {
 .card-img {
 
     img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        width: 80%;
     }
 }
 

@@ -23,7 +23,7 @@
                     <div class="profile-info">
                         <img src="../assets/img/marketing-consultant-expert.jpg" alt="consultant-expert">
                         <h4>Richard Madsen</h4>
-                        <p>Marketing Consultant Expert</p>
+                        <p class="role">Marketing Consultant Expert</p>
                         <p class="phone"><i class="bi bi-telephone-fill phone"></i> (555) 802-1234</p>
                     </div>
                     <div class="jumbo-inputs">
@@ -131,6 +131,10 @@ export default {
     .profile-info{
         h4{
             margin-bottom: 15px 0;
+        }
+        .role{
+            font-size: 15px;
+            color: rgb(157, 154, 154);
         }
         .phone {
             margin-top: 15px;

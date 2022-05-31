@@ -25,14 +25,17 @@ export default {
     margin-bottom: 70px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
-.card-text,
-.card-img{
-    width: 50%;
+.card-text{
+    width: 20%;
+}
 
+.card-img{
+    width: 40%;
 }
 .card-text {
-    padding: 50px 100px 0 0;
+    // padding: 50px 500px 0 0;
     h2 {
         font-size: 35px;
         font-weight: bold;
@@ -40,6 +43,7 @@ export default {
     p{
         font-size: 18px;
         font-weight: lighter;
+        margin: 20px 0;
     }
 }
 .card-btn{

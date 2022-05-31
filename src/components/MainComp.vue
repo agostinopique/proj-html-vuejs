@@ -75,6 +75,30 @@
                     :award="award"/>
             </div>
         </div>
+        <div class="avada-team">
+            <div class="avada-img">
+                <img src="../assets/img/large-testimonial-600x583.jpg" alt="">
+            </div>
+            <div class="avada-text">
+                <p>"The team at Avada Marketing Consultant is fabulous. They helped ut unlock our potential oline and offline. We have axperienced year on year growth due to their progressive approach"</p>
+                <span class="testimonial-name">Kate Schandler</span>
+                <span class="testimonial-role">Marketing Consultant - Abstract</span>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-main">
+        <div class="ap-container">
+            <div class="marketing-resources">
+                <p>Marketing Resources: Insider Advice on How to Increase Online Sales</p>
+                <button class="bottom-btn">Explore All Resources</button>
+            </div>
+            <div class="marketing-articles">
+                <MarketingCards 
+                    v-for="(tip, index) in marketingTips"
+                    :key="`Tip-${index}`"
+                    :tip="tip"/>
+            </div>
+        </div>
     </div>
 </div>
 </template>
@@ -85,10 +109,13 @@ import CardComp from './CardComp.vue';
 import PartBrandComp from './PartBrandComp.vue';
 import MainBrandComp from './MainBrandComp.vue';
 import MiddleCardComp from './MiddleCardComp';
-import AwardComp from '@/components/AwardComp';
+import AwardComp from './AwardComp.vue';
+import MarketingCards from './MarketingCardsComp.vue'
 
 import cardElements from '@/assets/script/cardElements';
 import awardElements from '../assets/script/awardElements';
+import marketingTips from '../assets/script/marketingTips';
+
 
 export default {
     name: 'MainComp',
@@ -99,11 +126,13 @@ export default {
     MainBrandComp,
     MiddleCardComp,
     AwardComp,
+    MarketingCards
 },
     data(){
         return{
             cardElements: cardElements,
-            awardElements: awardElements
+            awardElements: awardElements,
+            marketingTips: marketingTips
         }
     }
 }
@@ -156,12 +185,12 @@ export default {
 }
 .secondary-card{
     width: 100%;
-    background-color: #F6F6F7;
+    background: rgb(244,244,246);
+    background: linear-gradient(180deg, rgba(244,244,246,1) 50%, rgba(255,255,255,1) 100%);
     margin-top: 80px;
     padding: 80px 0;
     .core-values{
         display: flex;
-        align-content: center;
         width: 70%;
         margin: 0 auto;
         .core-top{
@@ -209,5 +238,73 @@ export default {
         display: flex;
         justify-content: space-between;
     }
+}
+.avada-team {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 90px;
+    .avada-img {
+        width: 50%;
+    }
+    .avada-img img{
+        width: 60%;
+        border-radius: 5px;
+        box-shadow: 5px 5px 20px lightgrey;
+    }
+    .avada-text {
+        width: 20%;
+        p{
+            font-size: 23px;
+        }
+        .testimonial-name{
+            display: block;
+            margin-top: 40px;
+        }
+        .testimonial-role{
+            font-size: 13px;
+            color: rgb(177, 174, 174);
+        }
+    }
+}
+.bottom-main{
+    background: rgb(244,244,246);
+    background: linear-gradient(180deg, rgba(244,244,246,1) 50%, rgba(255,255,255,1) 100%);
+    margin-top: 80px;
+    margin-bottom: 110px;
+}
+.ap-container{
+    width: 80%;
+    margin: 0 auto;
+    
+    padding-top: 100px;
+    .marketing-resources{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        p {
+            width: 25%;
+            font-size: 33px;
+            font-weight: bold;
+        }
+        .bottom-btn{
+            background-color: #F86011;
+            color: white;
+            margin-left: 30px;
+            padding: 8px 25px;
+            border-radius: 7px;
+            height: fit-content;
+        }
+        
+    }
+
+}
+.marketing-articles {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 </style>

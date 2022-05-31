@@ -1,4 +1,4 @@
-<template>
+@include dFlexBetween;<template>
     <div class="footer-container">
         <div class="footer-lists">
 
@@ -44,6 +44,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import '../assets/style/mixins';
 
 .footer-container {
     width: 80%;
@@ -51,8 +52,7 @@ export default {
     height: 50vh;
     padding: 60px 0;
     .footer-lists{
-        display: flex;
-        justify-content: space-between;
+        @include dFlexBetween;
         margin-bottom: 40px;
     }
     .footer-info{
@@ -61,9 +61,8 @@ export default {
             font-size: 2rem;
         }
         .social-icons{
-            display: flex;
+            @include dFlexAlignCenter;
             justify-content: flex-start;
-            align-items: center;
             list-style: none;
             padding-left: 0;
             li{
@@ -75,9 +74,7 @@ export default {
         }
     }
     .bottom-links{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include dFlexAlignCenterBetween;
         margin-top: 100px;
     }
 }

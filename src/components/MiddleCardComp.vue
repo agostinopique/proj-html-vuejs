@@ -18,14 +18,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+@import '../assets/style/mixins';
 .ap_card{
     width: 70%;
     margin: 0 auto;
     margin-bottom: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include dFlexAlignCenterBetween;
 }
 .card-text{
     width: 50%;

@@ -42,6 +42,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style/mixins';
 .header-container {
     width: 70%;
     margin: 0 auto;
@@ -49,14 +50,12 @@ export default {
     background-color: white;
     .ap-container {
         height: 100%;
-        display: flex;
-        justify-content: space-between;
+        @include dFlexBetween;
         align-items: center;
     }
     .header-nav,
     .contacts {
-        display: flex;
-        align-items: center;
+        @include dFlexAlignCenter;
         height: 100%;
 
         .header-btn{
@@ -79,8 +78,7 @@ export default {
         }
     }
     .header-nav nav ul{
-        display: flex;
-        align-items: center;
+        @include dFlexAlignCenter;
         list-style: none;
         margin-bottom: 0;
 

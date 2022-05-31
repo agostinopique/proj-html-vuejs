@@ -37,10 +37,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style/mixins';
 .footer-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include dFlexAlignCenterBetween;
     width: 70%;
     margin: 0 auto;
     padding: 80px 0;
@@ -50,9 +49,8 @@ export default {
     }
 }
 .footer-right{
-    display: flex;
+    @include dFlexAlignCenter;
     flex-direction: column;
-    align-items: center;
 }
 .footer-left{
     color: white;

@@ -1,0 +1,15 @@
+@mixin dFlexBetween {
+    display:flex;
+    justify-content: space-between;
+}
+
+@mixin dFlexAlignCenter{
+    display: flex;
+    align-items: center;
+}
+
+@mixin dFlexAlignCenterBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

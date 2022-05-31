@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+@import '../assets/style/mixins';
 .center-main{
     text-align: center;
     width: 70%;
@@ -39,8 +39,7 @@ export default {
     }
 
     .brand-logos{
-        display: flex;
-        justify-content: space-between;
+        @include dFlexBetween;
         margin-top: 30px;
         img{
             width: 12%; 

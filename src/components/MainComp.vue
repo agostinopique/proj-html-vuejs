@@ -139,18 +139,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style/mixins';
 .expert-profile{
     width: 70%;
     margin: 250px auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include dFlexAlignCenterBetween;
     border-radius: 10px;
     box-shadow: -15px 15px 20px lightgrey;
     padding: 10px 25px;
     .expert-info{
-        display: flex;
-        align-items: center;
+        @include dFlexAlignCenter;
         .expert-name span{ 
             font-size: 15px;
             color: #6A6A6A;
@@ -200,17 +198,16 @@ export default {
     width: 50%;
     margin-right: 60px;
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
+    flex-direction: column;
     h4{
         margin-bottom: 20px;
     }
 }
 .core-right{
     width: 50%;
-    display: flex;
+    @include dFlexBetween;
     flex-direction: column;
-    justify-content: space-between;
     .core-container {
         display: flex;
         align-items: center;
@@ -237,14 +234,11 @@ export default {
     margin-top: 90px;
     text-align: center;
     .award-container{
-        display: flex;
-        justify-content: space-between;
+        @include dFlexBetween;
     }
 }
 .avada-team {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include dFlexAlignCenterBetween;
     width: 70%;
     margin: 150px auto;
     .avada-img {
@@ -283,8 +277,7 @@ export default {
     
     padding-top: 100px;
     .marketing-resources{
-        display: flex;
-        justify-content: space-between;
+        @include dFlexBetween;
         align-items: flex-end;
         p {
             width: 30%;
@@ -305,8 +298,7 @@ export default {
 }
 .marketing-articles {
     margin-top: 60px;
-    display: flex;
-    justify-content: space-between;
+    @include dFlexBetween;
     flex-wrap: wrap;
 }
 </style>

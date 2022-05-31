@@ -47,12 +47,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+@import '../assets/style/mixins';
 
 .jumbotron {
     height: 690px;
-    display: flex;
-    align-items: center;
+    @include dFlexAlignCenter; 
     position: relative;
     background-image: url('https://avada.theme-fusion.com/marketing-consultant/wp-content/uploads/sites/142/2020/06/marketing-intro.jpg');
     background-position: center;
@@ -89,8 +88,7 @@ export default {
         }
     }
     .ap-container{
-        display: flex;
-        justify-content: space-between; 
+        @include dFlexBetween;
         width: 70%;
         margin: 0 auto;
     }

@@ -1,7 +1,10 @@
 <template>
     <div class="ap_card">
         <div v-if="cardIndex % 2" class="card-text-onLeft">
-            <p class="type">{{cardElement.type}}</p>
+            <div class="card-logo">
+                <span :style="{color: cardElement.color}" v-html="cardElement.logo"></span>
+                <p class="type">{{cardElement.type}}</p>
+            </div>
             <h2>{{cardElement.title}}</h2>
             <p>{{cardElement.text}}</p>
             <button id="hover-btn" class="card-btn">Get a Consultation</button>
@@ -10,7 +13,10 @@
             <img :src="cardElement.image" :alt="cardElement.type">
         </div>
         <div v-if="!(cardIndex % 2)" class="card-text">
-            <p class="type">{{cardElement.type}}</p>
+            <div class="card-logo">
+                <span :style="{color: cardElement.color}" v-html="cardElement.logo"></span>
+                <p class="type">{{cardElement.type}}</p>
+            </div>
             <h2>{{cardElement.title}}</h2>
             <p>{{cardElement.text}}</p>
             <button id="hover-btn" class="card-btn">Get a Consultation</button>
@@ -51,6 +57,7 @@ export default {
         margin: 20px 0;
     }
     .type{
+        margin-left: 10px;
         font-size: 15px;
     }
 }
@@ -65,9 +72,15 @@ export default {
         font-size: 20px;
         margin: 20px 0;
     }
+        margin-left: 10px;
     .type{
+        margin-left: 10px;
         font-size: 15px;
     }
+}
+.card-logo{
+    display: flex;
+    align-items: center;
 }
 .card-btn{
     margin-top: 15px;

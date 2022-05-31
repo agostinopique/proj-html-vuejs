@@ -22,7 +22,7 @@
                     <img class="input-img" src="../assets/img/image.png" alt="">
                     <input type="email" placeholder="Your Email*">
                     <input type="phone" placeholder="Your Phone Number*">
-                    <button class="footer-btn">Get a Callback</button>
+                    <button id="hover-btn" class="footer-btn">Get a Callback</button>
                     <p class="footer-terms">By submitting my data I agree to be contacted</p>
                 </div>
             </div>
@@ -41,12 +41,12 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     padding: 80px 0;
     .footer-right,
     .footer-left{
-        width: 40%;
+        width: 50%;
     }
 }
 .footer-right{
@@ -57,10 +57,10 @@ export default {
 .footer-left{
     color: white;
     h2{
-        font-size: 80px;
+        font-size: 60px;
     }
     .footer-text{
-        font-size: 30px;
+        font-size: 22px;
         margin: 30px 30px 30px 0;
     }
     .divider-hr{
@@ -90,7 +90,7 @@ export default {
     border-radius: 8px;
     box-shadow: 0 10px 20px black;
     background-color: white;
-    scale: 1.4;
+    scale: 1.2;
     .profile-info img{
         width: 60px;
         height: 60px;

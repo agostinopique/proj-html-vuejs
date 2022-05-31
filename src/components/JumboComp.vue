@@ -11,11 +11,11 @@
                 </div>
                 <p>On Sale</p>
             </div>
-        <div class="container d-flex h-100">
+        <div class="ap-container">
             <div class="jumbo-text">
                 <h1>Unlock Your Online <br> Growth Potential</h1>
                 <p>Online marketing to secure customer retention, <br> leads, and sales. We focus on the bigger picture.</p>
-                <button class="jumbo-btn">Our Services <i class="bi bi-arrow-right-short"></i></button>
+                <button id="transparent-hover" class="jumbo-btn">Our Services <i class="bi bi-arrow-right-short"></i></button>
             </div>
             <div class="jumbo-right">
                 <div class="jumbo-form">
@@ -31,7 +31,7 @@
                         <img class="input-img" src="../assets/img/image.png" alt="">
                         <input type="email" placeholder="Your Email*">
                         <input type="phone" placeholder="Your Phone Number*">
-                        <button class="jumbo-btn">Get a Callback</button>
+                        <button id="hover-btn" class="jumbo-btn">Get a Callback</button>
                         <p class="jumbo-terms">By submitting my data I agree to be contacted</p>
                     </div>
                 </div>
@@ -50,9 +50,10 @@ export default {
 
 
 .jumbotron {
-    height: 500px;
+    height: 690px;
+    display: flex;
+    align-items: center;
     position: relative;
-    // background-color: red;
     background-image: url('https://avada.theme-fusion.com/marketing-consultant/wp-content/uploads/sites/142/2020/06/marketing-intro.jpg');
     background-position: center;
     background-size: cover;
@@ -87,40 +88,47 @@ export default {
             }
         }
     }
+    .ap-container{
+        display: flex;
+        justify-content: space-between; 
+        width: 70%;
+        margin: 0 auto;
+    }
     .jumbo-text {
-        width: 50%;
         margin-top: 60px;
         color:  white;
         h1{
-            font-size: 3rem;
+            font-size: 4rem;
+            font-weight: bold;
             text-transform: capitalize;
         }
         p {
-            font-size: 18px;
+            font-size: 30px;
             margin: 20px 0;
         }
         .jumbo-btn{
             border: none;
-            padding: 8px 25px;
+            padding: 12px 30px;
             border-radius: 7px;
+            font-size: 20px;
         }
     }
     .jumbo-right{
-        width: 50%;
-        height: 100%;
-        margin-top: 60px;
-    
+        position: relative;
+        width: 40%;
+        top: 70px;
     }
 }
 
 .jumbo-form{
-    width: 350px;
-    height: 95%;
+    width: 480px;
+    height: 600px;
     padding: 15px;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 0 10px 20px black;
+    box-shadow: 0 10px 20px rgb(178, 177, 177);
     background-color: white;
+    font-size: 1.5rem;
     .profile-info img{
         width: 60px;
         height: 60px;
@@ -144,9 +152,9 @@ export default {
     .jumbo-inputs{
         position: relative;
         input {
-            width: 100%;
+            width: 95%;
             padding: 10px 10px;
-            border-radius: 5px;
+            border-radius: 8px;
             border-style: solid;
             margin: 6px 0;
         }
@@ -166,8 +174,8 @@ export default {
         }
         .input-img{
             position: absolute;
-            top: 23px;
-            right: 5px;
+            top: 30px;
+            right: 20px;
         }
     }
 }

@@ -24,18 +24,17 @@ export default {
     width: 20%; 
     h5{
         margin-bottom: 15px;
-        font-weight: bold;
     }
     ul{
         list-style: none;
         padding: 0;
         li{
             margin: 15px 0;
-            font-size:20px;
+            font-size: 16px;
         }
         a{
             text-decoration: none;
-            color: black;
+            color: rgb(98, 94, 94);
         }
     }
 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="container center-main">
+    <div class="center-main">
         <h2>Some Brands We Work With</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing!</p>
         <div class="brand-logos">
@@ -26,14 +26,16 @@ export default {
 
 .center-main{
     text-align: center;
+    width: 70%;
+    margin: 0 auto;
     margin-top: 150px;
     h2{
         font-weight: bold;
-        font-size: 38px;
+        font-size: 40px;
     }
     p{
-        font-weight: 100;
-        font-size: 18px;
+        font-size: 20px;
+        color: rgb(140, 137, 137);
     }
 
     .brand-logos{
@@ -41,7 +43,7 @@ export default {
         justify-content: space-between;
         margin-top: 30px;
         img{
-            width: 10%; 
+            width: 12%; 
         }
     }
 

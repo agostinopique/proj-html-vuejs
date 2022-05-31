@@ -3,7 +3,7 @@
         <div class="card-text">
             <h2>We Boost Our Clients' Bottom Line by Optimizing Their Growth Potential.</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ad eius! Lorem ipsum dolor sit amet consectetur</p>
-            <button class="card-btn">Why Work With Us</button>
+            <button id="hover-btn" class="card-btn">Why Work With Us</button>
         </div>
         <div class="card-img">
             <img src="../assets/img/we-boost-our-clients-600x549.jpg" alt="">
@@ -28,16 +28,16 @@ export default {
     justify-content: space-between;
 }
 .card-text{
-    width: 20%;
+    width: 50%;
 }
 
 .card-img{
-    width: 40%;
+    width: 50%;
 }
 .card-text {
-    // padding: 50px 500px 0 0;
+    padding-right: 250px;
     h2 {
-        font-size: 35px;
+        font-size: 40px;
         font-weight: bold;
     }
     p{
@@ -49,7 +49,7 @@ export default {
 .card-btn{
     margin-top: 15px;
     border: none;
-    padding: 8px 25px;
+    padding: 10px 28px;
     border-radius: 7px;
     background-color: #F85F11;
     color: white;

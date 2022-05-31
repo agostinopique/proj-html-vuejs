@@ -1,5 +1,5 @@
 <template>
-    <div class="container d-flex">
+    <div class="ap-container">
         <h2>Trusted by Leading Organisations</h2>
         <div class="card-container">
             <BrandCard 
@@ -7,7 +7,7 @@
                 :key="index"
                 :brandData= "brandData"/>
         </div>
-            <button class="main-btn">Read More Case Studies</button>
+            <button id="hover-btn" class="main-btn">Read More Case Studies</button>
     </div>
 </template>
 
@@ -28,11 +28,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container{
+.ap-container{
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
     margin-top: 200px;
     flex-direction: column;
     h2{
-        font-size: 40px;
+        font-size: 45px;
         font-weight: bold;
         text-align: center;
         margin-bottom: 50px;

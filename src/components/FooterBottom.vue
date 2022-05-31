@@ -5,12 +5,12 @@
             <div class="footer-info">
                 <h2>Grow Your online Business Strategically and Improve Customer Retention</h2>
                 <ul class="social-icons">
-                    <li><i class="fa-brands fa-facebook-f fa-2x"></i></li>
-                    <li><i class="fa-brands fa-twitter fa-2x"></i></li>
-                    <li><i class="fa-brands fa-instagram fa-2x"></i></li>
-                    <li><i class="fa-brands fa-youtube fa-2x"></i></li>
-                    <li><i class="fa-brands fa-linkedin-in fa-2x"></i></li>
-                    <li><i class="fa-brands fa-tiktok fa-2x"></i></li>
+                    <li><i class="fa-brands fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                    <li><i class="fa-brands fa-linkedin-in"></i></li>
+                    <li><i class="fa-brands fa-tiktok"></i></li>
                 </ul>
             </div>
             <FooterListComp 
@@ -58,7 +58,7 @@ export default {
     .footer-info{
         width: 30%;
         h2{
-            font-size: 3rem;
+            font-size: 2rem;
         }
         .social-icons{
             display: flex;
@@ -68,6 +68,9 @@ export default {
             padding-left: 0;
             li{
                 margin: 20px 30px 0 0;
+                i{
+                    font-size: 25px;
+                }
             }
         }
     }

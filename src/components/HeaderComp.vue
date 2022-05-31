@@ -1,6 +1,6 @@
 <template>
     <div class="header-container">
-        <div class="container d-flex justify-content-between align-items-center">
+        <div class="ap-container d-flex justify-content-between align-items-center">
             <div class="header-logo">
                 <img src="../assets/img/avada-marketing-logo.png" alt="avada-logo">
             </div>
@@ -9,7 +9,7 @@
                     <ul>
                         <li v-for="(comp, index) in headerElements"
                             :key="index"
-                            :class="comp.isActive ? 'active' : ''">{{comp.name}}
+                            :class="comp.isActive ? 'active' : ''"><a href="#">{{comp.name}}</a>
                             <i v-if="comp.chevron === true" class="bi bi-chevron-down"></i>
                         </li>
                     </ul>
@@ -19,7 +19,7 @@
                 <div class="d-flex align-items-center">
                     <i class="bi bi-telephone-fill phone"></i>
                     <p>(555) 802-1234</p>
-                    <button class="header-btn">Free Quote</button>
+                    <button id="light-hover" class="header-btn">Free Quote</button>
                 </div>
             </div>
         </div>
@@ -43,11 +43,15 @@ export default {
 
 <style lang="scss" scoped>
 .header-container {
-    width: 100%;
-    height: 90px;
+    width: 70%;
+    margin: 0 auto;
+    height: 110px;
     background-color: white;
-    .container{ 
+    .ap-container {
         height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     .header-nav,
     .contacts {
@@ -58,7 +62,7 @@ export default {
         .header-btn{
             background-color: #FFE7DA;
             color: #F85D00;
-            margin-left: 30px;
+            margin-left: 40px;
             padding: 8px 25px;
             border-radius: 7px;
             border-color: #FFE7DA;
@@ -72,7 +76,6 @@ export default {
 
         p{
             margin-bottom: 0;
-            
         }
     }
     .header-nav nav ul{
@@ -82,11 +85,17 @@ export default {
         margin-bottom: 0;
 
         li{
-            padding: 0 5px;
-            margin: 5px 20px;
+            margin: 10px 30px;
+            font-size: 16px;
+            a{
+                text-decoration: none;
+                color: black;
+            }   
             &.active{
                 border-bottom: 2px solid #F85D00;
-                color: #F85D00;
+                a{
+                    color: #F85D00;
+                }
             }
         }
     }

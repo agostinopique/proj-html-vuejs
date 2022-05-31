@@ -2,6 +2,7 @@
     <div class="brand-card">
         <div class="brand-img">
             <img :src="brandData.image" :alt="brandData.brand">
+            <div class="overlay"></div>
         </div>
         <div class="brand-description">
             <p>{{brandData.text}}</p>
@@ -23,10 +24,11 @@ export default {
 
 <style lang="scss" scoped>
 .brand-card {
-    width: 330px;
+    width: 410px;
     .brand-img{
         width: 100%;
         margin-bottom: 15px;
+        position: relative;
         img{
             width: 100%;
         }
@@ -34,16 +36,33 @@ export default {
     .brand-description{
 
         p{
-            font-size: 28px;
+            font-size: 22px;
             margin-bottom: 30px;
         }
         .increase-data {
-            font-size: 40px;
+            font-size: 45px;
             font-weight: bold;
         }
         span {
             display: block;
         }
     }
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background: rgb(248,95,17);
+    background: linear-gradient(0deg, rgba(248,95,17,1) 0%, rgba(255,255,255,1) 70%);
+}
+
+.brand-img:hover .overlay {
+    opacity: 0.5;
 }
 </style>

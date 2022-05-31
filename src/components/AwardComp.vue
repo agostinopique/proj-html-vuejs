@@ -17,8 +17,10 @@ export default {
 
 <style lang="scss" scoped>
 .award-card{
+    margin-top: 50px;
     img{
-    width: 40%;
+        width: 50%;
+        margin-bottom: 20px;
     }
 }
 </style>

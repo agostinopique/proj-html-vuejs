@@ -8,7 +8,7 @@
         :cardIndex="index" />
     <PartBrandComp />
 
-    <div class="container expert-profile">
+    <div class="expert-profile">
         <div class="expert-info">
             <div class="expert-img">
                 <img src="../assets/img/marketing-expert-cta.png" alt="marketing-expert">
@@ -22,7 +22,7 @@
             <p>Drive Leads and Sales with Avada</p>
         </div>
         <div class="expert-number">
-            <button class="expert-btn"><i class="bi bi-telephone-fill phone"></i>(555) 802-1234</button>
+            <button id="light-hover" class="expert-btn"><i class="bi bi-telephone-fill phone"></i>(555) 802-1234</button>
         </div>
     </div>
 
@@ -77,7 +77,7 @@
         </div>
         <div class="avada-team">
             <div class="avada-img">
-                <img src="../assets/img/large-testimonial-600x583.jpg" alt="">
+                <img src="../assets/img/large-testimonial-600x583.jpg" alt="avada-consultant">
             </div>
             <div class="avada-text">
                 <p>"The team at Avada Marketing Consultant is fabulous. They helped ut unlock our potential oline and offline. We have axperienced year on year growth due to their progressive approach"</p>
@@ -90,7 +90,7 @@
         <div class="ap-container">
             <div class="marketing-resources">
                 <p>Marketing Resources: Insider Advice on How to Increase Online Sales</p>
-                <button class="bottom-btn">Explore All Resources</button>
+                <button id="hover-btn" class="bottom-btn">Explore All Resources</button>
             </div>
             <div class="marketing-articles">
                 <MarketingCards 
@@ -140,11 +140,11 @@ export default {
 
 <style lang="scss" scoped>
 .expert-profile{
+    width: 70%;
+    margin: 250px auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
-    margin-top: 50px;
     border-radius: 10px;
     box-shadow: -15px 15px 20px lightgrey;
     padding: 10px 25px;
@@ -152,18 +152,18 @@ export default {
         display: flex;
         align-items: center;
         .expert-name span{ 
-            font-size: 14px;
+            font-size: 15px;
             color: #6A6A6A;
         }
         .expert-name p{
-            font-size: 20px;
+            font-size: 22px;
         }
     }
     .expert-role p{ 
-        font-size: 20px;
+        font-size: 25px;
     }
     .expert-img{ 
-        width: 50px;
+        width: 65px;
         margin-right: 20px;
         img{
             width: 100%;
@@ -174,12 +174,13 @@ export default {
             background-color: #FFE7DA;
             color: #F85D00;
             margin-left: 30px;
-            padding: 8px 25px;
+            padding: 10px 28px;
             border-radius: 7px;
             border-color: #FFE7DA;
             border-style: solid;
+            font-size: 18px;
             i{
-                margin-right: 5px;
+                margin-right: 10px;
             }
         }
 }
@@ -193,14 +194,14 @@ export default {
         display: flex;
         width: 70%;
         margin: 0 auto;
-        .core-top{
-            margin: 40px 0;
-        }
     }
 }
 .core-left{
     width: 50%;
     margin-right: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     h4{
         margin-bottom: 20px;
     }
@@ -213,12 +214,13 @@ export default {
     .core-container {
         display: flex;
         align-items: center;
+        margin: 20px 0;
     }
     .core-icon{
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
         text-align: center;
-        line-height: 60px;
+        line-height: 80px;
         border: 1px solid #F86011;
         border-radius: 15px;
         margin-right: 15px;
@@ -244,18 +246,18 @@ export default {
     align-items: center;
     justify-content: space-between;
     width: 70%;
-    margin: 0 auto;
-    margin-top: 90px;
+    margin: 150px auto;
     .avada-img {
         width: 50%;
     }
     .avada-img img{
-        width: 60%;
+        width: 100%;
         border-radius: 5px;
         box-shadow: 5px 5px 20px lightgrey;
     }
     .avada-text {
-        width: 20%;
+        width: 50%;
+        padding-left: 180px;
         p{
             font-size: 23px;
         }
@@ -285,8 +287,8 @@ export default {
         justify-content: space-between;
         align-items: flex-end;
         p {
-            width: 25%;
-            font-size: 33px;
+            width: 30%;
+            font-size: 35px;
             font-weight: bold;
         }
         .bottom-btn{
